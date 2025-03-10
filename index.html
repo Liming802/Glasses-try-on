@@ -11,9 +11,9 @@
 </head>
 
 <body>
-  <h1 id="gametitle">Glasses Tryout</h1>
-  <button id="customFileLabel" class="button-style cute-button" onclick="document.getElementById('imageInput').click()">Click here to upload a selfie</button>
-  <input type="file" id="imageInput" accept="image/*, .heic" class="invisible-input" style="display: none;">
+  <h1 id="gametitle">Update Your Look</h1>
+  <label for="imageInput" id="customFileLabel">Click here to upload a selfie</label>
+  <input type="file" id="imageInput" accept="image/*, .heic" class="invisible-input">
 
   <canvas id="photoCanvas" width="400" height="400"></canvas>
   <canvas id="glassesCanvas01" width="400" height="400"></canvas>
@@ -22,20 +22,19 @@
     <button id="style" onclick="showStyleContainer()" class="cartoon-button">Styles</button>
     <button id="size" onclick="showSliderContainer()" class="cartoon-button">Sizes</button>
     <button id="color" onclick="showColorContainer()" class="cartoon-button">Colors</button>
-    <button style="margin-left: 30px;" id="saveImageBtn">Save</button>
-  </div>
+    <button style="margin-left: 30px; background-color:#fe9634;" id="saveImageBtn" class="cartoon-button">Save</button>
+    </div>
     <div class="style-container">
       <label for="rectangle">
-         <img src="1.png" id="rectangleImage" alt="Rectangle Glasses" onclick="setGlassesType('rectangle')" width="120" height="100">
-      </label>
+         <img src="1.png" id ='rectangleImage' alt="Rectangle Glasses" onclick="setGlassesType('rectangle')"width="120" height="100"
 
-      <label for="triangle">
-          <img src="2.png" id="triangleImage" alt="Triangle Glasses" onclick="setGlassesType('triangle')" width="120" height="100">
-      </label>
+      <label  for="triangle">
+          <img src="2.png" id ='triangleImage' alt="Triangle Glasses" onclick="setGlassesType('triangle')" width="120" height="100">
 
-      <label for="star">
-            <img src="3.png" id="starImage" alt="Star Glasses" width="120" height="100">
-      </label>
+        <label  for="triangle">
+            <img src="3.png" id ='starImage' alt="Star Glasses"  width="120" height="100">
+          
+         </div>
     </div>
   <div class="slider-container">
     <label for="frameWidth">
