@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <script src="save.js" defer></script>
+  <title>Glasses try-on app</title>
+</head>
+
+<body>
+  <h1 id="gametitle">Update Your Look</h1>
+  <label for="imageInput" id="customFileLabel">Click here to upload a selfie</label>
+  <input type="file" id="imageInput" accept="image/*, .heic" class="invisible-input">
+
+  <canvas id="photoCanvas" width="400" height="400"></canvas>
+  <canvas id="glassesCanvas01" width="400" height="400"></canvas>
+
+  <div class="buttons">
+    <button id="style" onclick="showStyleContainer()" class="cartoon-button">Styles</button>
+    <button id="size" onclick="showSliderContainer()" class="cartoon-button">Sizes</button>
+    <button id="color" onclick="showColorContainer()" class="cartoon-button">Colors</button>
+    <button style="margin-left: 30px; background-color:#fe9634;" id="saveImageBtn" class="cartoon-button">Save</button>
+    </div>
+    <div class="style-container">
+      <label for="rectangle">
+         <img src="1.png" id ='rectangleImage' alt="Rectangle Glasses" onclick="setGlassesType('rectangle')"width="120" height="100"
+
+      <label  for="triangle">
+          <img src="2.png" id ='triangleImage' alt="Triangle Glasses" onclick="setGlassesType('triangle')" width="120" height="100">
+
+        <label  for="triangle">
+            <img src="3.png" id ='starImage' alt="Star Glasses"  width="120" height="100">
+          
+         </div>
+    </div>
+  <div class="slider-container">
+    <label for="frameWidth">
+      <span>Width:</span>
+      <input type="range" id="frameWidth" min="50" max="200" value="100" class="cute-slider">
+    </label>
+
+    <label for="cornerRadius">
+      <span>CornerRadius:</span>
+      <input type="range" id="cornerRadius" min="0" max="50" value="8" class="cute-slider">
+    </label>
+
+    <label for="lensSeparation">
+      <span>LensSeparation:</span>
+      <input type="range" id="lensSeparation" min="0" max="100" value="10" class="cute-slider">
+    </label>
+
+    <label for="borderWidth">
+      <span>BorderWidth:</span>
+      <input type="range" id="borderWidth" min="0" max="10" value="2" class="cute-slider">
+    </label>
+  </div>
+
+  <div class="color-container">
+
+    <label for="frameAlphaInput">
+      <span>FillAlpha:</span>
+      <input type="range" id="frameAlphaInput" min="0" max="1" step="0.01" value="0.3" class="cute-slider">
+    </label>
+
+    <label for="frameFillColor">
+      <span>FillColor:</span>
+      <input type="color" id="frameFillColor" value="#FFFFFF">
+    </label>
+
+    <label for=" frameStrokeColor">
+      <span>FrameStrokeColor:</span>
+      <input type="color" id="frameStrokeColor" value="#000000">
+    </label>
+  </div>
+
+</body>
+
+</html>
